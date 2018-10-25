@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>photoswipe-simplify.js｜PhotoSwipe.js simplify by the VanillaJS.</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="robots" content="index,follow">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400|700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css">
+    <link rel="stylesheet" href="test/styles.css">
+    <link rel="stylesheet" href="test/prittyprint.css">
+</head>
+<body>
+	<div id="page">
+		
+		<main id="main">
+            <section>
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <h1>PhotoSwipe Simplify<br><small>PhotoSwipe.js simplfy the VanillaJS.</small></h1>
+                        <div class="row gutters-10" data-pswp>
+                            <div class="col-lg-3 col-4 mb10">
+                                <a href="test/img01.jpg" target="_blank" data-caption="This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text." data-author="Photo by pixabay.com"><img src="test/img01-thumb.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-4 mb10">
+                                <a href="test/img02.jpg" target="_blank"><img src="test/img02-thumb.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-4 mb10">
+                                <a href="test/img03.jpg" target="_blank"><img src="test/img03-thumb.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-4 mb10">
+                                <a href="test/img04.jpg" target="_blank"><img src="test/img04-thumb.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <h3 class="title mb-3">Installation</h3>
+                            <p>You can install it using npm:</p>
+                            <div class="code-print">
+                                <pre class="prettyprint linenums"><code class="language-html">npm install photoswipe photoswipe-simplify --save</code></pre>
+                            </div>
+                            <p>Or just include the script in your page:</p>
+                            <div class="code-print">
+                                <pre class="prettyprint linenums"><code class="language-html">
+&lt;script src=&quot;path/to/photoswipe.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/photoswipe-ui-default.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/photoswipe-simplify.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre>
+                            </div>
+                            <p>And, include the PhotoSwipe style in your page:</p>
+                            <pre class="prettyprint linenums"><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/photoswipe.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/default-skin.min.css&quot;&gt;
+</code></pre>
+                            <p>Included photoswipe-simplify.js in your project and initialize:</p>
+                            <div class="code-print">
+<pre  class="prettyprint linenums">
+<code class="language-html">&lt;script charset=&quot;utf-8&quot;&gt;
+    photoswipeSimplify.init();
+&lt;/script&gt;</code></pre>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="row gutters-10" data-pswp>
+                                <div class="col-lg-3 col-4 mb10">
+                                    <a href="test/img05.jpg" target="_blank"><img src="test/img05-thumb.jpg" alt=""></a>
+                                </div>
+                                <div class="col-lg-3 col-4 mb10">
+                                    <a href="test/img06.jpg" target="_blank"><img src="test/img06-thumb.jpg" alt=""></a>
+                                </div>
+                                <div class="col-lg-3 col-4 mb10">
+                                    <a href="test/img07.jpg" target="_blank"><img src="test/img07-thumb.jpg" alt=""></a>
+                                </div>
+                                <div class="col-lg-3 col-4 mb10">
+                                    <a href="test/img08.jpg" target="_blank"><img src="test/img08-thumb.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <h3 class="title mb-3">Usage</h3>
+                            <div class="code-print">
+                                <pre class="prettyprint linenums"><code class="language-html">&lt;!-- Wrapper element adding the [data-pswp] attribute. --&gt;
+&lt;div data-pswp&gt;
+    &lt;!-- Detect image links from internal elements and generate PhotoSwipe objects. --&gt;
+    &lt;!-- If you want to display captions and authors, specify the data-caption and data-author attributes. --&gt;
+    &lt;a href=&quot;test/img01.jpg&quot; target=&quot;_blank&quot; data-caption=&quot;This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.&quot; data-author=&quot;Photo by pixabay.com&quot;&gt;&lt;img src=&quot;test/img01-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+    ...
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <h3 class="title mb-3">Options</h3>
+                            <p>
+                                PhotoSwipe options can be used as they are.<br>
+                                Please see <a href="http://photoswipe.com/documentation/options.html" target="_blank">this page</a> for details.<br>
+                                Specify the option as follows.
+                            </p>
+                            <div class="code-print">
+                                <pre  class="prettyprint linenums"><code class="language-html">photoswipeSimplify.init({
+    history: false,
+    focus: false,
+});</code></pre></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+		<footer id="footer">
+            <div id="copyright">
+                photoswipe-simplify.js © 2018 Mineo Okuda. released under MIT license
+            </div>      
+        </footer>
+	</div>
+	<script src="https://rawgit.com/google/code-prettify/master/loader/run_prettify.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" charset="utf-8"></script>
+	<script src="dist/js/photoswipe-simplify.min.js" charset="utf-8"></script>
+	<script>
+		photoswipeSimplify.init({
+            history: false,
+            focus: false,
+        });
+	</script>
+</body>
+</html>
