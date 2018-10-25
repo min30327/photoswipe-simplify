@@ -1,74 +1,64 @@
-# luxy.js
+# photoswipe-simplify.js
 
-Inertia scroll and parallax effect plugin in Vanilla.js
+PhotoSwipe.js simplfy the VanillaJS.
 
 
 ## Demo
-[View the demo](http://min30327.github.io/luxy.js/)
+[View the demo](http://min30327.github.io/photoswipe-simplify/)
 
 ## Installation
 
 You can install it using npm:
 
 ```
-npm install luxy.js --save
+npm install photoswipe photoswipe-simplify --save
 ```
 
 Or just include the script in your page:
 
 ```html
-<script src="path/to/luxy.js" charset="utf-8"></script>
+<script src="path/to/photoswipe.js" charset="utf-8"&gt;</script>
+<script src="path/to/photoswipe-ui-default.js" charset="utf-8"></script>
+<script src="path/to/photoswipe-simplify.js" charset="utf-8"></script>
 ```
 
-Included luxy.js in your project and initialize:
+And, include the PhotoSwipe style in your page:
+
+```html
+<link rel="stylesheet" href="path/to/photoswipe.min.css">
+<link rel="stylesheet" href="path/to/default-skin.min.css">
+```
+
+Included photoswipe-simplify.js in your project and initialize:
 
 ```html
 <script charset="utf-8">
-    luxy.init();
+    photoswipeSimplify.init();
 </script>
 ```
 
+
 ## Usage
 
-Wrap the entire content with the element specified in the wrapper option. Please exclude fixed elements.
-
 ```html
-<div id="luxy">
-    ... Entire content
-</div>
-```
-
-Add .luxy-el to the element for which parallax effect is to be specified.
-
-```html
-<div id="luxy">
-    <div class="luxy-el"></div>
-</div>
-```
-
-Specify the speed of the parallax effect with the data-speed-y attribute and offset with the data-offset attribute.
-
-```html
-<div id="luxy">
-    <div class="luxy-el" data-speed-y="5" data-offset="-50"></div>
-</div>
-```
-
-If you want to move horizontally, specify data-horizontal="1" and specify the speed in the horizontal direction with the data-speed-x attribute.
-
-```html
-<div id="luxy">
-    <div class="luxy-el" data-horizontal="1" data-speed-x="-5"></div>
+<!-- Wrapper element adding the [data-pswp] attribute. -->
+<div data-pswp>
+    <!-- Detect image links from internal elements and generate PhotoSwipe objects. -->
+    <!-- If you want to display captions and authors, specify the data-caption and data-author attributes. -->
+    <a href="test/img01.jpg" target="_blank" data-caption="This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text." data-author="Photo by pixabay.com"><img src="test/img01-thumb.jpg" alt=""></a>
+    ...
 </div>
 ```
 
 ## Options
 
-| Name         | default    | description                       |
-|--------------|------------|-----------------------------------|
-| wrapper      | '#luxy'    | Entire content wrapper element.   |
-| targets      | '.luxy-el' | Parallax effect targets elements. |
-| wrapperSpeed | 0.08       | Inertia scroll speed.             |
+PhotoSwipe options can be used as they are.
+Please see this page for details.
+Specify the option as follows.
 
-
-
+```html
+photoswipeSimplify.init({
+    history: false,
+    focus: false,
+});
+```
