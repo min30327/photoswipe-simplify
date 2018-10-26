@@ -29,7 +29,7 @@
     "name": "Mineo Okuda",
     "url": "https://www.willstyle.co.jp"
   },
-  "description": "PhotoSwipe.js simplfy the VanillaJS.",
+  "description": "PhotoSwipe.js simplify by the VanillaJS.",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",

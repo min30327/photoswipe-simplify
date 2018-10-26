@@ -1,6 +1,6 @@
 # photoswipe-simplify.js
 
-PhotoSwipe.js simplfy the VanillaJS.
+PhotoSwipe.js simplify by the VanillaJS.
 
 
 ## Demo
