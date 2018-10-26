@@ -1,29 +1,29 @@
 {
   "_args": [
     [
-      "photoswipe-simplify@0.0.1",
+      "photoswipe-simplify@0.0.2",
       "/Users/mineo/workspace/DEMO/photoswipe-simplify/"
     ]
   ],
-  "_from": "photoswipe-simplify@0.0.1",
-  "_id": "photoswipe-simplify@0.0.1",
+  "_from": "photoswipe-simplify@0.0.2",
+  "_id": "photoswipe-simplify@0.0.2",
   "_inBundle": false,
   "_location": "/photoswipe-simplify",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "photoswipe-simplify@0.0.1",
+    "raw": "photoswipe-simplify@0.0.2",
     "name": "photoswipe-simplify",
     "escapedName": "photoswipe-simplify",
-    "rawSpec": "0.0.1",
+    "rawSpec": "0.0.2",
     "saveSpec": null,
-    "fetchSpec": "0.0.1"
+    "fetchSpec": "0.0.2"
   },
   "_requiredBy": [
     "/"
   ],
-  "_spec": "0.0.1",
+  "_spec": "0.0.2",
   "_where": "/Users/mineo/workspace/DEMO/photoswipe-simplify/",
   "author": {
     "name": "Mineo Okuda",
@@ -59,7 +59,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com:min30327/photoswipe-simplify.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "photoswipe": "^4.1.2"
   }

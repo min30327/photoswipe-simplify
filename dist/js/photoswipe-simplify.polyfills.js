@@ -1,5 +1,5 @@
 /*!
- * photoswipe-simplify v0.0.1: PhotoSwipe.js simplfy the VanillaJS.
+ * photoswipe-simplify v0.0.1: PhotoSwipe.js simplify by the VanillaJS.
  * (c) 2018 Mineo Okuda
  * MIT License
  * git+ssh://git@github.com:min30327/photoswipe-simplify.git
@@ -56,7 +56,7 @@
 			};
 
 			// Loop through each object and conduct a merge
-			for ( ; i < length; i++ ) {
+			for ( i = 0; i < length; i++ ) {
 				var obj = arguments[i];
 				merge(obj);
 			}
@@ -82,12 +82,11 @@
 				var self = this;
 				
 				self.options = extend(defaults, options || {});
-				console.log(self.options)
 				if(!self.initialized){
 					self.append_template();
 					self.initialized = true;
 				}
-				self.initPhotoSwipe(self.options.target)
+				self.initPhotoSwipe(self.options.target);
 			},
 
 			append_template: function (){
@@ -127,13 +126,13 @@
 						});
 						promise.then((function(){
 							self.galleryLoaded();						
-						}))
+						}));
 						if(self.thumbnails[i].length > 0){
-							for(var l = 0; l < self.thumbnails[i].length; l++) {
-								self.thumbnails[i][l].setAttribute('data-pswp-index',i)
-								self.thumbnails[i][l].classList.add('pswp--item');
+							for(var n = 0; n < self.thumbnails[i].length; n++) {
+								self.thumbnails[i][n].setAttribute('data-pswp-index',i);
+								self.thumbnails[i][n].classList.add('pswp--item');
 
-								self.attachEvent(self.thumbnails[i][l],i,l);
+								self.attachEvent(self.thumbnails[i][n],i,n);
 							}
 						}
 					}
@@ -154,13 +153,13 @@
 
 				el.addEventListener('click',(function(e){
 					e.preventDefault();
-					document.body.classList.add('pswp--launched')
+					document.body.classList.add('pswp--launched');
 					var active = document.querySelector('.pswp--active');
 					if(active){
 						active.classList.remove('pswp--active');
 					}
 					self.galleries[galleryIndex].classList.add('pswp--active');
-					self.galleries[galleryIndex].setAttribute('data-pswp-index',index)
+					self.galleries[galleryIndex].setAttribute('data-pswp-index',index);
 					if(self.galleries[galleryIndex].classList.contains('pswp--loaded')){
 						if(index >= 0) {
 							self.open(galleryIndex,index);
@@ -185,7 +184,7 @@
 			    			h : img.naturalHeight,
 			    			title : title,
 			    			author : author
-			    		}
+			    		};
 			    		resolve();
 					};
 				});
