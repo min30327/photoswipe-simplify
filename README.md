@@ -53,7 +53,7 @@ Included photoswipe-simplify.js in your project and initialize:
 ## Options
 
 PhotoSwipe options can be used as they are.
-Please see this page for details.
+Please see [this page](http://photoswipe.com/documentation/options.html) for details.
 Specify the option as follows.
 
 ```html
