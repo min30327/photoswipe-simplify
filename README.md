@@ -17,7 +17,7 @@ npm install photoswipe photoswipe-simplify --save
 Or just include the script in your page:
 
 ```html
-<script src="path/to/photoswipe.js" charset="utf-8"&gt;</script>
+<script src="path/to/photoswipe.js" charset="utf-8"></script>
 <script src="path/to/photoswipe-ui-default.js" charset="utf-8"></script>
 <script src="path/to/photoswipe-simplify.js" charset="utf-8"></script>
 ```
