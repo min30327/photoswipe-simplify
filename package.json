@@ -61,6 +61,7 @@
   },
   "version": "0.0.2",
   "dependencies": {
-    "photoswipe": "^4.1.2"
+    "photoswipe": "^4.1.2",
+    "promise-polyfill": "8.1.0"
   }
 }
