@@ -31,8 +31,12 @@
   },
   "description": "PhotoSwipe.js simplify by the VanillaJS.",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^0.14.0",
     "gulp-flatten": "^0.3.1",
@@ -50,7 +54,8 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "lazypipe": "^1.0.1",
-    "node-fs": "^0.1.7"
+    "node-fs": "^0.1.7",
+    "promise-polyfill": "8.1.0"
   },
   "license": "MIT",
   "main": "./dist/js/photoswipe-simplify.min.js",
@@ -61,7 +66,8 @@
   },
   "version": "0.0.2",
   "dependencies": {
-    "photoswipe": "^4.1.2",
-    "promise-polyfill": "8.1.0"
+    "@babel/polyfill": "^7.2.5",
+    "@babel/runtime": "^7.3.1",
+    "photoswipe": "^4.1.2"
   }
 }

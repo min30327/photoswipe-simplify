@@ -41,6 +41,7 @@ var stylish = settings.scripts ? require('jshint-stylish') : null;
 var concat = settings.scripts ? require('gulp-concat') : null;
 var uglify = settings.scripts ? require('gulp-uglify') : null;
 var optimizejs = settings.scripts ? require('gulp-optimize-js') : null;
+var babel = require('gulp-babel');
 
 
 /**
@@ -94,6 +95,21 @@ var fileVersion = settings.cacheBust ? '.' + package.version : '';
 var jsTasks = lazypipe()
 	.pipe(header, banner.full, { package : package })
 	.pipe(optimizejs)
+	.pipe(function(){
+		return babel({
+	      presets: [
+	        [
+		        'env', {
+		        	'plugins': ['@babel/transform-runtime'],
+		        	'targets': {
+		        		'browsers': ['ie >= 11']
+	        		},
+	          		'modules' : false
+        		}
+	        ]
+	      ]
+	    })
+	})
 	.pipe(gulp.dest, paths.scripts.output)
 	.pipe(rename, { suffix: '.min' + fileVersion })
 	.pipe(uglify)
