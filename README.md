@@ -103,7 +103,7 @@ The data-pswp attribute can be applied to much larger contexts than simply the i
 </section>
 ```
 
-photoswipe-simplify.ja will consider all images between ```<section></section>``` to be part of the same gallery. 
+photoswipe-simplify.js will consider all images between ```<section></section>``` to be part of the same gallery. 
 
 ## data-size attribute
 
