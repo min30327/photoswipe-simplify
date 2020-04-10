@@ -1,8 +1,10 @@
 # photoswipe-simplify.js
 
-PhotoSwipe.js simplify by the VanillaJS.
+[PhotoSwipe.js](https://photoswipe.com/) simplified by the VanillaJS team.
 
-This script significantly reduces the complexity of setting up PhotoSwipe for your website, removing almost all script-editing requirements and allowing for more simplified, and larger-context gallery definitions. 
+PhotoSwipe is an extremely well-built solution for self-hosting image galleries on websites. However, its setup can be quite onerous. 
+
+photoswipe-simplify.js significantly reduces the complexity of setting up PhotoSwipe for your website, removing almost all script-editing requirements and allowing for more simplified, and larger-context gallery definitions. 
 
 
 ## Demo
@@ -39,6 +41,23 @@ Included photoswipe-simplify.js in your project and initialize:
 </script>
 ```
 
+## PhotoSwipe Options
+
+PhotoSwipe options can be used as they are.
+
+Please see [this page](http://photoswipe.com/documentation/options.html) for details.
+
+Specify the option as follows:
+
+```html
+photoswipeSimplify.init({
+    history: false,
+    focus: false,
+});
+```
+
+----
+
 
 ## Usage
 
@@ -52,6 +71,7 @@ Included photoswipe-simplify.js in your project and initialize:
 </div>
 ```
 
+### Context Scope
 The data-pswp attribute can be applied to much larger contexts than simply the immediate parent container. The gallery is defined by the scope of the parent container. For example:
 
 ```html
@@ -83,11 +103,11 @@ The data-pswp attribute can be applied to much larger contexts than simply the i
 </section>
 ```
 
-Would consider all images between ```<section></section>``` to be part of the same gallery. 
+photoswipe-simplify.ja will consider all images between ```<section></section>``` to be part of the same gallery. 
 
 ## data-size attribute
 
-PhotoSwipe on its own requires image sizes to be known in advance. This can be a major hurdle to setting up the script. PhotoSwipe simplify simplifies PhotoSwipe setup by automatically loading all the high-resolution images for a gallery and then calculating sizes to initialize PhotoSwipe. 
+PhotoSwipe on its own requires image sizes to be known in advance. This can be a major hurdle to setting up the script. photoswipe-simplify.js simplifies PhotoSwipe setup by automatically loading all the high-resolution images for a gallery and then calculating sizes to initialize PhotoSwipe. 
 
 This may simplify setup but can drastically increase bandwidth usage on larger galleries. 
 
@@ -97,21 +117,9 @@ You can stop the pre-loading of high-resolution gallery images by adding the ```
 <a href="images/gallery-high/photo01.jpg" data-size="2000x3000"><img src="images/gallery-thumb/photo01.jpg" /></a>
 ````
 
-PhotoSwipe simplify, on seeing the ```data-size``` attribute will use that to establish the necessary resolution data for PhotoSwipe. 
+photoswipe-simplify.js, on seeing the ```data-size``` attribute will use that to establish the necessary resolution data for PhotoSwipe. 
 
 
 
 
-## PhotoSwipe Options
 
-PhotoSwipe options can be used as they are.
-Please see [this page](http://photoswipe.com/documentation/options.html) for details.
-
-Specify the option as follows:
-
-```html
-photoswipeSimplify.init({
-    history: false,
-    focus: false,
-});
-```
