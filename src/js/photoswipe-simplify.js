@@ -456,19 +456,36 @@ if (!('Promise' in globalNS)) {
 				var self = this;
 		    	new Promise(function (resolve, reject) {
 		    		
-			    	var img = new Image();
-					img.src = src;
-		    		
-					img.onload = function(){
-						self.items[galleryIndex][i] ={
-			    			src: src,
-			    			w : img.naturalWidth,
-			    			h : img.naturalHeight,
-			    			title : title,
-			    			author : author
-			    		};
-			    		resolve();
-					};
+		    	// Addition to check for data-size attribute so you don't have
+	        // to load every high-resolution image if unnecessary 
+	        if(node.getAttribute('data-size')) {
+	          var size = node.getAttribute('data-size').split('x');
+	          self.items[galleryIndex][i] = {
+	              src: src,
+	              w: parseInt(size[0], 10),
+	              h: parseInt(size[1], 10),
+	              title: title,
+	              author: author
+	            };
+	          resolve();
+	        } 
+	        // If no data-size, then OK, fine, load the high-res image
+	        // to read size
+	        else {
+	          var img = new Image();
+	          img.src = src;
+
+	          img.onload = function () {
+	            self.items[galleryIndex][i] = {
+	              src: src,
+	              w: img.naturalWidth,
+	              h: img.naturalHeight,
+	              title: title,
+	              author: author
+	            };
+	            resolve();
+	          };
+	        }
 				});
 			},
 
@@ -517,11 +534,12 @@ if (!('Promise' in globalNS)) {
 
 					for(var i = 0;i < self.thumbnails[galleryIndex].length; i++) {
 
-						var src = self.thumbnails[galleryIndex][i].getAttribute('href');
-						var title = self.thumbnails[galleryIndex][i].getAttribute('data-caption');
-						var author = self.thumbnails[galleryIndex][i].getAttribute('data-author');
-							
-						promises.push(self.getImageSizes(src,galleryIndex,i,title,author));
+						var node = self.thumbnails[galleryIndex][i];
+	          var src = self.thumbnails[galleryIndex][i].getAttribute('href');
+	          var title = self.thumbnails[galleryIndex][i].getAttribute('data-caption');
+	          var author = self.thumbnails[galleryIndex][i].getAttribute('data-author');
+
+	          promises.push(self.getImageSizes(node, src, galleryIndex, i, title, author));
 					    Promise.all(promises).then(function () {
 					    	resolve();
 					    });
