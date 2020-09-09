@@ -452,7 +452,7 @@ if (!('Promise' in globalNS)) {
 				});
 			},
 
-			getImageSizes : function(src,galleryIndex,i,title,author){
+			getImageSizes : function(node,src,galleryIndex,i,title,author){
 				var self = this;
 		    	new Promise(function (resolve, reject) {
 		    		
